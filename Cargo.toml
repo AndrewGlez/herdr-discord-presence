@@ -1,0 +1,9 @@
+[package]
+name = "herdr-discord-presence"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+discord-rich-presence = "0.2"
+fs2 = "0.4"
+serde_json = "1"

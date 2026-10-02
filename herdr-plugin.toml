@@ -1,0 +1,21 @@
+id = "local.discord-presence"
+name = "Discord Presence"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Show the current Herdr folder and agent state in Discord Rich Presence."
+platforms = ["linux", "macos", "windows"]
+
+[[startup]]
+command = ["./target/release/herdr-discord-presence"]
+
+[[actions]]
+id = "start"
+title = "Start Discord presence"
+contexts = ["global"]
+command = ["./target/release/herdr-discord-presence", "--once"]
+
+[[panes]]
+id = "presence"
+title = "Discord presence"
+placement = "overlay"
+command = ["./target/release/herdr-discord-presence"]
